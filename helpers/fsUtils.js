@@ -1,13 +1,12 @@
-
+//Imports modules
 const fs = require('fs')
 const util = require('util')
 
-
+//Converts the asychronous functions into promises
 const readFromFile = util.promisify(fs.readFile);
 const writeToFile = util.promisify(fs.writeFile)
 
-
-
+//Append the content to the file
 function appendToFile(filePath, content) {
     return new Promise((resolve, reject) => {
       readFromFile(filePath, 'utf8')
