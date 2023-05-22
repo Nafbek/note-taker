@@ -4,7 +4,7 @@ const path = require('path');
 const apiRoutes = require('./routes/index.js');
 const clog = require('./middleware/clogs.js');
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 //Initialize the express app
 const app = express();
